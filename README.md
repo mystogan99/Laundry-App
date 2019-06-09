@@ -29,6 +29,7 @@ foo@bar: sudo fuser -k 8000/tcp
 - Add order category
 - Export Order (pdf, excel, csv and etc)
 - Update Order
+- Delete Order
 - Print Invoice
 - Login
 
