@@ -7,8 +7,8 @@ Order management system build for laundry city.
 
 - Migrate Database by typing this:
 ```
-python manage.py migrate
+foo@bar: python manage.py migrate
 ```
 ```
-python manage.py createsuperuser
+foo@bar: python manage.py createsuperuser
 ``
