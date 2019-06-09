@@ -24,3 +24,10 @@ foo@bar: python manage.py runserver
 ```
 foo@bar: sudo fuser -k 8000/tcp
 ```
+## Features
+- Add order
+- Add products
+- Export Order (pdf, excel, csv and etc)
+- Edit / Delete Order
+- Print Invoice
+
