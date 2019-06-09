@@ -17,3 +17,7 @@ foo@bar: python manage.py createsuperuser
 ```
 foo@bar: pip install -r requirements.txt
 ```
+- Run server by typing this:
+```
+python manage.py runserver
+```
