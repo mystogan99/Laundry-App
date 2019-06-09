@@ -21,3 +21,7 @@ foo@bar: pip install -r requirements.txt
 ```
 foo@bar: python manage.py runserver
 ```
+- Reset port by typing:
+```
+foo@bar: sudo fuser -k 8000/tcp
+```
