@@ -1,7 +1,6 @@
 # Laundry-App
 Order management system built for laundry city.
 
-
 ## Install
 - To change Database go to "DOMS/settings.py" and find "DATABASE = " then change database (visit here for more https://docs.djangoproject.com/en/1.10/ref/settings/#databases). Default Database is SQLite.
 
