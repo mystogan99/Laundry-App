@@ -16,4 +16,4 @@ foo@bar: python manage.py createsuperuser
 - Install requirements by typing this:
 ```
 pip install -r requirements.txt
-'''
+```
