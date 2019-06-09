@@ -9,6 +9,7 @@ Order management system build for laundry city.
 ```
 foo@bar: python manage.py migrate
 ```
+- Create new user by typing this:
 ```
 foo@bar: python manage.py createsuperuser
 ```
