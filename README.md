@@ -11,4 +11,4 @@ foo@bar: python manage.py migrate
 ```
 ```
 foo@bar: python manage.py createsuperuser
-``
+```
