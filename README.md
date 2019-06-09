@@ -1,5 +1,5 @@
 # Laundry-App
-Order management system build for laundry city.
+Order management system built for laundry city.
 
 
 ## Install
