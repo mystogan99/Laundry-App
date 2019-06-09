@@ -19,5 +19,5 @@ foo@bar: pip install -r requirements.txt
 ```
 - Run server by typing this:
 ```
-python manage.py runserver
+foo@bar: python manage.py runserver
 ```
