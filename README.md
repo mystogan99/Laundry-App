@@ -10,7 +10,7 @@ foo@bar:~$ python manage.py migrate
 ```
 - Create new user by typing this:
 ```
-foo@bar: python manage.py createsuperuser
+foo@bar:~$ python manage.py createsuperuser
 ```
 - Install requirements by typing this:
 ```
