@@ -14,15 +14,15 @@ foo@bar:~$ python manage.py createsuperuser
 ```
 - Install requirements by typing this:
 ```
-foo@bar: pip install -r requirements.txt
+foo@bar:~$ pip install -r requirements.txt
 ```
 - Run server by typing this:
 ```
-foo@bar: python manage.py runserver
+foo@bar:~$ python manage.py runserver
 ```
 - Reset port by typing:
 ```
-foo@bar: sudo fuser -k 8000/tcp
+foo@bar:~$ sudo fuser -k 8000/tcp
 ```
 ## Features
 - Add order
