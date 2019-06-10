@@ -6,7 +6,7 @@ Order management system built for laundry city.
 
 - Migrate Database by typing this:
 ```
-foo@bar: python manage.py migrate
+foo@bar:~$ python manage.py migrate
 ```
 - Create new user by typing this:
 ```
