@@ -5,11 +5,12 @@ from orders import views as my_order
 from django.contrib.auth import views as auth
 from django.contrib.auth.decorators import login_required
 
+from orders import views
+
 
 urlpatterns = [
-    url(r'^jet/', include('jet.urls', 'jet')), 
-    url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     url(r'^admin/', admin.site.urls),
+    url(r'^home/$', views.home, name='home2'),
     url(r'^$', my_order.index, name='home'),
     url(r'^orders$', my_order.index, name='home'),
     url(r'^order/(?P<order_id>\d+)/$', my_order.show, name='show'),

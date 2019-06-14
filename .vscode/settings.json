@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "zook/bin/python3.6"
+    "python.pythonPath": "/home/mystagon/anaconda3/envs/myDjango/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
