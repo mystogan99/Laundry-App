@@ -1,1 +1,1 @@
-web: gunicorn LaundryCity.wsgi --log-file -
+web: gunicorn CRUD-admin.wsgi 
