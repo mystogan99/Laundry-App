@@ -5857,7 +5857,6 @@ section.style-info .btn-flat:hover,
   color: inherit;
 }
 .style-image {
-  background-image: url('graphics/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   filter: saturate(200%);
