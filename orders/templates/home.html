@@ -36,8 +36,8 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
               <li class="nav-item active"><a class="nav-link" href="#">Home</a></li> 
-              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
-              <li class="nav-item"><a class="nav-link" href="package.html">Packages</a>
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li> 
+              <li class="nav-item"><a class="nav-link" href="#">Packages</a>
               <!-- <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Pages</a>
@@ -77,12 +77,8 @@
           <h1>Take your laundry
             to a new place.</h1>
           <p>Schedule a Rinse any day of the week. Your Valet will always arrive between 8pm and 10pm.</p>
-          <a class="button button-hero mt-4" href="{% url 'new' %}">Order Now</a>
-            <!-- ==================modal form============================ -->
-
-              
-
-            <!-- =========================modal form=========================== -->
+          <a class="button button-hero mt-4"  href="{% url 'client' %}">Order Now</a>
+          
         </div>
         <div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
           <img class="img-fluid" src="{% static 'assets3/img/home/hero-img.png' %}" alt="">
@@ -546,5 +542,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script></a>
   <script src="{% static 'assets3/js/mail-script.js' %}"></script>
   <script src="{% static 'assets3/js/skrollr.min.js' %}"></script>
   <script src="{% static 'assets3/js/main.js' %}"></script>
+  <script src="{% static 'js/jquery.bootstrap.modal.forms.min.js' %}"></script>
 </body>
 </html>

@@ -1,12 +1,34 @@
 from django.shortcuts import render, redirect
 from .models import Order, Product
-from .forms import OrderForm, ProductForm
+from .forms import OrderForm, ProductForm, userform
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
+def succesfull(request):
+     return render(request, 'succesfull.html')
+
 
 
 def home(request):
     return render(request, 'home.html')
+
+# ========================user form===============#
+
+def client(request):
+    if request.POST:
+        form = userform(request.POST)
+        if form.is_valid():
+            if form.save():
+                return redirect('/succesfull', messages.success(request, 'Order was successfully created.', 'alert-success'))
+            else:
+                return redirect('/succesfull', messages.error(request, 'Data is not saved', 'alert-danger'))
+        else:
+            return redirect('/succesfull', messages.error(request, 'Form is not valid', 'alert-danger'))
+    else:
+        form = userform()
+        return render(request, 'client.html', {'form':form})
+
+
 
 
 @login_required
@@ -25,11 +47,11 @@ def new(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             if form.save():
-                return redirect('/', messages.success(request, 'Order was successfully created.', 'alert-success'))
+                return redirect('/HolyGrail', messages.success(request, 'Order was successfully created.', 'alert-success'))
             else:
-                return redirect('/', messages.error(request, 'Data is not saved', 'alert-danger'))
+                return redirect('/HolyGrail', messages.error(request, 'Data is not saved', 'alert-danger'))
         else:
-            return redirect('/', messages.error(request, 'Form is not valid', 'alert-danger'))
+            return redirect('/HolyGrail', messages.error(request, 'Form is not valid', 'alert-danger'))
     else:
         form = OrderForm()
         return render(request, 'new.html', {'form':form})
@@ -41,11 +63,11 @@ def edit(request, order_id):
         form = OrderForm(request.POST, instance=order)
         if form.is_valid():
             if form.save():
-                return redirect('/', messages.success(request, 'Order was successfully updated.', 'alert-success'))
+                return redirect('/HolyGrail', messages.success(request, 'Order was successfully updated.', 'alert-success'))
             else:
-                return redirect('/', messages.error(request, 'Data is not saved', 'alert-danger'))
+                return redirect('/HolyGrail', messages.error(request, 'Data is not saved', 'alert-danger'))
         else:
-            return redirect('/', messages.error(request, 'Form is not valid', 'alert-danger'))
+            return redirect('/HolyGrail', messages.error(request, 'Form is not valid', 'alert-danger'))
     else:
         form = OrderForm(instance=order)
         return render(request, 'edit.html', {'form':form})
@@ -54,7 +76,7 @@ def edit(request, order_id):
 def destroy(request, order_id):
     order = Order.objects.get(id=order_id)
     order.delete()
-    return redirect('/', messages.success(request, 'Order was successfully deleted.', 'alert-success'))
+    return redirect('/HolyGrail', messages.success(request, 'Order was successfully deleted.', 'alert-success'))
 
 
 
