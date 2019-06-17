@@ -797,11 +797,7 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
 }
 html[dir="rtl"] .select2-search input {
   padding: 4px 5px 4px 20px;
-  /* background: #ffffff url('select2.png') no-repeat -37px -22px;
-  background: url('select2.png') no-repeat -37px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
-  background: url('select2.png') no-repeat -37px -22px, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2.png') no-repeat -37px -22px, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2.png') no-repeat -37px -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0; */
+  
 }
 .select2-drop.select2-drop-above .select2-search input {
   margin-top: 4px;
