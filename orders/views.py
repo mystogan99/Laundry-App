@@ -5,12 +5,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 def succesfull(request):
-     return render(request, 'succesfull.html')
+     return render(request, 'newsuccess.html')
 
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'newhome.html')
 
 # ========================user form===============#
 
