@@ -11,9 +11,9 @@ from orders import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='index'),
+    url(r'^$', my_order.client, name='index'),
     # url(r'^$', my_order.index, name='home'),
-    url(r'^client$', my_order.client, name='client'),
+    # url(r'^client$', my_order.client, name='client'),
     url(r'^succesfull$', views.succesfull, name='succesfull'),
     url(r'^HolyGrail$', my_order.index, name='home'),
     url(r'^order/(?P<order_id>\d+)/$', my_order.show, name='show'),

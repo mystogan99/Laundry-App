@@ -9,8 +9,8 @@ def succesfull(request):
 
 
 
-def home(request):
-    return render(request, 'index55.html')
+# def home(request):
+#     return render(request, 'client.html')
 
 # ========================user form===============#
 
