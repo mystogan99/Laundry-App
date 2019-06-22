@@ -114,7 +114,11 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
+
+
+
 LOGIN_REDIRECT_URL = '/HolyGrail'
 LOGIN_URL = 'login'
 
 django_heroku.settings(locals())
+

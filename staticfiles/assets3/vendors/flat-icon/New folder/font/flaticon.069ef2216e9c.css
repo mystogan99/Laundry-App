@@ -1,0 +1,35 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 20/02/2019 11:43
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.8be9dd0002ff.eot");
+  src: url("./Flaticon.8be9dd0002ff.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.4616461dfdc7.woff2") format("woff2"),
+       url("./Flaticon.925c16ba2d5a.woff") format("woff"),
+       url("./Flaticon.8f32ba5ab7d8.ttf") format("truetype"),
+       url("./Flaticon.b07640b56bdf.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.b07640b56bdf.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-sing:before { content: "\f100"; }
+.flaticon-prize:before { content: "\f101"; }
+.flaticon-earth-globe:before { content: "\f102"; }
