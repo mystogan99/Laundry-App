@@ -13,6 +13,7 @@ class Product(models.Model):
 class Order (models.Model):
     name = models.CharField(max_length=200)
     phone = models.CharField(max_length=20)
+    email = models.CharField(max_length=100,  default="")
     address = models.TextField()
     delivery_date = models.DateField(blank=True)
     product_id = models.ForeignKey(Product,on_delete=models.CASCADE)

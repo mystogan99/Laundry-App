@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Order, Product
+from django.core.mail import send_mail
+from django.conf import settings
 from .forms import OrderForm, ProductForm, userform
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -9,17 +11,19 @@ def succesfull(request):
 
 
 
-# def home(request):
-#     return render(request, 'client.html')
-
-# ========================user form===============#
 
 def client(request):
     if request.POST:
         form = userform(request.POST)
+        instance = form.save(commit=False)
         if form.is_valid():
-            if form.save():
+            if instance.save():
                 return redirect('/succesfull', messages.success(request, 'Order was successfully created.', 'alert-success'))
+                subject = "Order Confirmation"
+                from_email = settings.EMAIL_HOST_USER
+                to_email = [instance.email]
+                message = "Your order has been placed"
+                send_mail(subject= subject, from_email = from_email, recipient_list=to_email, message=message, fail_silently=False)
             else:
                 return redirect('/succesfull', messages.error(request, 'Data is not saved', 'alert-danger'))
         else:
