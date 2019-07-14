@@ -51,6 +51,6 @@ class userform(ModelForm):
     order_status = forms.TypedChoiceField(required=False, choices=OPTIONS2, widget=forms.RadioSelect, initial='Confirm')
     class Meta:
         model = Order
-        fields = ['name','phone','address','delivery_date','product_id','payment_option','quantity','order_status']
+        fields = ['name','phone', 'email', 'address','delivery_date','product_id','payment_option','quantity','order_status']
         # exclude = ('order_status',)
 # =========modal form======= #
