@@ -17,7 +17,7 @@ def client(request):
         form = userform(request.POST)
         instance = form.save(commit=False)
         if form.is_valid():
-            if instance.save():
+            if form.save():
                 return redirect('/succesfull', messages.success(request, 'Order was successfully created.', 'alert-success'))
                 subject = "Order Confirmation"
                 from_email = settings.EMAIL_HOST_USER

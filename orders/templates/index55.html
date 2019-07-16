@@ -437,7 +437,15 @@
 
                                                         <div class="row">
                                                             <div class="col-sm-6">
-                                                                <header>Customer Info</header>
+                                                                <style>
+                                                                    header.csinfo {
+                                                                        font-weight: 900;
+                                                                    }
+                                                                </style>
+                                                                <header class="csinfo"><strong>Customer Info</strong></header>
+                                                                <br>
+
+
                                                                 <div class="form-group floating-label">
                                                                     {{ form.name | add_class:'form-control' }}
                                                                     <label for="regular2">Customer Name</label>
@@ -447,12 +455,18 @@
                                                                     <label for="regular2">Phone Number</label>
                                                                 </div>
                                                                 <div class="form-group floating-label">
+                                                                    {{ form.email | add_class:'form-control' }}
+                                                                    <label for="regular2">Email</label>
+                                                                </div>
+                                                                <div class="form-group floating-label">
                                                                     {{ form.address | add_class:'form-control' | attr:'rows:2'}}
                                                                     <label for="textarea2">Address</label>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
-                                                                <header>Order Info</header>
+                                                                <header class="csinfo"><strong>Order Info</strong></header>
+                                                                <br>
+
                                                                 <div class="form-group">
                                                                     {{ form.delivery_date | add_class:'form-control' | attr:'type:date'}}
                                                                     <label for="regular2">Delivery Date</label>
