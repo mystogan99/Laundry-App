@@ -443,49 +443,51 @@
                                                                     }
                                                                 </style>
                                                                 <header class="csinfo"><strong>Customer Info</strong></header>
-                                                                <br>
+
+                                                                <hr>
 
 
                                                                 <div class="form-group floating-label">
-                                                                    {{ form.name | add_class:'form-control' }}
-                                                                    <label for="regular2">Customer Name</label>
+                                                                    <label for="regular2">Customer Name</label> {{ form.name | add_class:'form-control' }}
+
                                                                 </div>
                                                                 <div class="form-group floating-label">
-                                                                    {{ form.phone | add_class:'form-control' }}
-                                                                    <label for="regular2">Phone Number</label>
+                                                                    <label for="regular2">Phone Number</label> {{ form.phone | add_class:'form-control' }}
+
                                                                 </div>
                                                                 <div class="form-group floating-label">
-                                                                    {{ form.email | add_class:'form-control' }}
-                                                                    <label for="regular2">Email</label>
+                                                                    <label for="regular2">Email</label> {{ form.email | add_class:'form-control' }}
+
                                                                 </div>
                                                                 <div class="form-group floating-label">
-                                                                    {{ form.address | add_class:'form-control' | attr:'rows:2'}}
-                                                                    <label for="textarea2">Address</label>
+                                                                    <label for="textarea2">Address</label> {{ form.address | add_class:'form-control' | attr:'rows:2'}}
+
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <header class="csinfo"><strong>Order Info</strong></header>
-                                                                <br>
+
+                                                                <hr>
 
                                                                 <div class="form-group">
-                                                                    {{ form.delivery_date | add_class:'form-control' | attr:'type:date'}}
-                                                                    <label for="regular2">Delivery Date</label>
+                                                                    <label for="regular2">Delivery Date</label> {{ form.delivery_date | add_class:'form-control' | attr:'type:date'}}
+
                                                                 </div>
                                                                 <div class="form-group floating-label">
-                                                                    {{ form.product_id | add_class:'form-control select2-list' | attr:'id:product_id'}}
-                                                                    <label for="textarea2">Product ID</label>
+                                                                    <label for="textarea2">Product ID</label> {{ form.product_id | add_class:'form-control select2-list' | attr:'id:product_id'}}
+
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-sm-6">
                                                                         <div class="form-group floating-label">
-                                                                            {{ form.payment_option| add_class:'form-control' }}
-                                                                            <label for="select2">Payment Options</label>
+                                                                            <label for="select2">Payment Options</label> {{ form.payment_option| add_class:'form-control' }}
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-sm-6">
                                                                         <div class="form-group floating-label">
-                                                                            {{ form.quantity | add_class:'form-control'}}
-                                                                            <label for="regular2">Quantity</label>
+                                                                            <label for="regular2">Quantity</label> {{ form.quantity | add_class:'form-control'}}
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
