@@ -5,6 +5,9 @@ from django.conf import settings
 from .forms import OrderForm, ProductForm, userform
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+
 
 def succesfull(request):
      return render(request, 'succesfull.html')
@@ -15,15 +18,18 @@ def succesfull(request):
 def client(request):
     if request.POST:
         form = userform(request.POST)
-        instance = form.save(commit=False)
         if form.is_valid():
+            subject = "Order from laundry city"
+            from_email = settings.EMAIL_HOST_USER
+            to_email = form.cleaned_data['email']
+            message = "Your order has been placed succesfully. Your valet with reach you soon."
+            try:
+                send_mail(subject, message, from_email, [to_email], fail_silently = False)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
             if form.save():
                 return redirect('/succesfull', messages.success(request, 'Order was successfully created.', 'alert-success'))
-                subject = "Order Confirmation"
-                from_email = settings.EMAIL_HOST_USER
-                to_email = [instance.email]
-                message = "Your order has been placed"
-                send_mail(subject= subject, from_email = from_email, recipient_list=to_email, message=message, fail_silently=False)
+                
             else:
                 return redirect('/succesfull', messages.error(request, 'Data is not saved', 'alert-danger'))
         else:
