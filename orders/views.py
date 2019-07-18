@@ -16,10 +16,8 @@ def succesfull(request):
 
 
 def client(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
+    if request.POST:
+        form = userform(request.POST)
         if form.is_valid():
             subject = "Order from laundry city"
             from_email = settings.EMAIL_HOST_USER
