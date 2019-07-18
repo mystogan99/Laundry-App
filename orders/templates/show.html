@@ -87,8 +87,8 @@
                                         <tr>
                                             <td class="text-center">{{ order.quantity }}</td>
                                             <td> <b>{{ order.product_id.id}}. {{ order.product_id.product_name }}</b> <br><small>{{ order.product_id.product_details}}</small></td>
-                                            <td class="text-right">Tk {{ order.product_id.price }}</td>
-                                            <td class="text-right">Tk {% widthratio order.product_id.price 1 order.quantity %}</td>
+                                            <td class="text-right">₹ {{ order.product_id.price }}</td>
+                                            <td class="text-right">₹ {% widthratio order.product_id.price 1 order.quantity %}</td>
                                         </tr>
                                         <tr>
                                             <td colspan="2" rowspan="4">
@@ -97,15 +97,15 @@
                                                 <p><strong><em>Recevied By __________________</em></strong></p>
                                             </td>
                                             <td class="text-right"><strong>Subtotal</strong></td>
-                                            <td class="text-right">TK {% widthratio order.product_id.price 1 order.quantity %}</td>
+                                            <td class="text-right">₹ {% widthratio order.product_id.price 1 order.quantity %}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-right hidden-border"><strong>VAT</strong></td>
-                                            <td class="text-right hidden-border">$0.00</td>
+                                            <td class="text-right hidden-border">₹ 0.00</td>
                                         </tr>
                                         <tr>
                                             <td class="text-right"><strong class="text-lg text-accent">Total</strong></td>
-                                            <td class="text-right"><strong class="text-lg text-accent">{% widthratio order.product_id.price 1 order.quantity  %}</strong></td>
+                                            <td class="text-right"><strong class="text-lg text-accent">₹ {% widthratio order.product_id.price 1 order.quantity  %}</strong></td>
                                         </tr>
                                     </tbody>
                                 </table>
