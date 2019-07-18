@@ -1,4 +1,19 @@
 {% extends 'dash2.html' %} {% block title %} All Orders {% endblock %} {% block body %}
+
+<section class="welcome p-t-10 ">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-4 sf-4 offset-4 ">
+                <h1 class="title-4 ">Welcome back,
+                    <span>{{request.user.username}}.</span>
+                </h1>
+                <hr class="line-seprate ">
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="table-data__tool-right">
     <div class='row'>
         <div class="col-10 offset-2">
