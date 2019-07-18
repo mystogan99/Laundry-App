@@ -1,0 +1,26 @@
+{% load widget_tweaks %}
+<form class="form floating-label" action="{% url 'login' %}" accept-charset="utf-8" method="post">
+
+    {% csrf_token %} {% if form.errors %}
+
+    <div class="alert alert-danger">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Error!</strong> Your username and password didn't match. Please try again.
+    </div>
+
+    {% endif %} {{ form.username|add_class:"form-control" }} {{ form.password|add_class:"form-control" }}
+
+
+
+    <div class="row">
+        <div class="col-xs-6 text-left">
+
+        </div>
+        <!--end .col -->
+        <div class="col-xs-6 text-right">
+            <button class="btn btn-primary btn-raised" type="submit">Login</button>
+        </div>
+        <!--end .col -->
+    </div>
+    <!--end .row -->
+</form>

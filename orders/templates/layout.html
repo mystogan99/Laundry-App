@@ -1,4 +1,7 @@
  {% load staticfiles %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,157 +39,166 @@
     <!--max sidemenu: menubar-pin -->
 
     <!-- BEGIN HEADER-->
-    <!-- <header id="header" >
-			<div class="headerbar"> -->
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!-- <div class="headerbar-left">
-					<ul class="header-nav header-nav-options">
-						<li class="header-nav-brand" >
-							<div class="brand-holder">
-								<a href="{% url 'home' %}">
-									<span class="text-lg text-light text-danger">Laundry</span><span class="text-lg text-bold text-primary"> City</span>
-								</a>
-							</div>
-						</li>
-						<li>
-							<a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
-								<i class="fa fa-bars"></i>
-							</a>
-						</li>
-					</ul>
-				</div> -->
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- <div class="headerbar-right">
-					<ul class="header-nav header-nav-profile">
-						<li class="dropdown">
-							<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
-								<span class="profile-info">
+    <header id="header">
+        <div class="headerbar">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="headerbar-left">
+                <ul class="header-nav header-nav-options">
+                    <li class="header-nav-brand">
+                        <div class="brand-holder">
+                            <a href="{% url 'home' %}">
+                                <span class="text-lg text-light text-danger">Laundry</span><span class="text-lg text-bold text-primary"> City</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="headerbar-right">
+                <ul class="header-nav header-nav-profile">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+                            <span class="profile-info">
 									<h4 class="text-lg text-bold text-primary">Admin</h4>
 								</span>
-							</a>
-							<ul class="dropdown-menu animation-dock">
-								<li class="dropdown-header">My profile</li>
-								<li><a href="{% url 'change_password' %}">Change Password</a></li>
-								<li class="divider"></li>
-								<li><a href="{% url 'logout' %}"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li> -->
-    <!-- </ul> -->
-    <!--end .dropdown-menu -->
-    <!-- </li> -->
-    <!--end .dropdown -->
-    <!-- </ul> -->
-    <!--end .header-nav-profile -->
-    <!-- </div> -->
-    <!--end #header-navbar-collapse -->
-    <!-- </div>
-    </header> -->
+                        </a>
+                        <ul class="dropdown-menu animation-dock">
+                            <li class="dropdown-header">My profile</li>
+                            <li><a href="{% url 'change_password' %}">Change Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{% url 'logout' %}"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
+                        </ul>
+                        <!--end .dropdown-menu -->
+                    </li>
+                    <!--end .dropdown -->
+                </ul>
+                <!--end .header-nav-profile -->
+            </div>
+            <!--end #header-navbar-collapse -->
+        </div>
+    </header>
     <!-- END HEADER-->
 
     <!-- BEGIN BASE-->
-    <!-- <div id="base"> -->
+    <div id="base">
 
-    <!-- BEGIN OFFCANVAS LEFT -->
-    <!-- <div class="offcanvas">
-        </div> -->
-    <!--end .offcanvas-->
-    <!-- END OFFCANVAS LEFT -->
+        <!-- BEGIN OFFCANVAS LEFT -->
+        <div class="offcanvas">
+        </div>
+        <!--end .offcanvas-->
+        <!-- END OFFCANVAS LEFT -->
 
-    <!-- BEGIN CONTENT-->
-    <!--end #content-->
-    <!-- END CONTENT -->
+        <!-- BEGIN CONTENT-->
+        <div id="content">
 
-    <!-- BEGIN MENUBAR-->
-    <!-- <div id="menubar" class="menubar-inverse ">
-				<div class="menubar-fixed-panel">
-					<div>
-						<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
-							<i class="fa fa-bars"></i>
-						</a>
-					</div>
-					<div class="expanded">
-						<a href="{% url 'home' %}">
-							<span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
-						</a>
-					</div>
-				</div>
-				<div class="menubar-scroll-panel"> -->
+            {% if messages %} {% for message in messages %}
+            <div {% if message.tags %} class="alert {{ message.tags }} text-center" {% endif %}>
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {{ message }}
+            </div>
+            {% endfor %} {% endif %} {% block body %} {% endblock %}
 
-    <!-- BEGIN MAIN MENU -->
-    <!-- <ul id="main-menu" class="gui-controls"> -->
+        </div>
+        <!--end #content-->
+        <!-- END CONTENT -->
 
-    <!-- BEGIN DASHBOARD -->
-    <!-- <li>
-							<a href="{% url 'home' %}" class="active">
-								<div class="gui-icon"><i class="md md-home"></i></div>
-								<span class="title">Dashboard</span>
-							</a> -->
-    <!-- </li> -->
-    <!--end /menu-li -->
-    <!-- END DASHBOARD -->
+        <!-- BEGIN MENUBAR-->
+        <div id="menubar" class="menubar-inverse ">
+            <div class="menubar-fixed-panel">
+                <div>
+                    <a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="expanded">
+                    <a href="{% url 'home' %}">
+                        <span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
+                    </a>
+                </div>
+            </div>
+            <div class="menubar-scroll-panel">
 
-    <!-- BEGIN ORDER -->
-    <!-- <li class="gui-folder">
-							<a>
-								<div class="gui-icon"><i class="fa fa-shopping-cart"></i></div>
-								<span class="title">Order</span>
-							</a> -->
-    <!--start submenu -->
-    <!-- <ul>
-                                <li><a href="{% url 'home'%}" ><span class="title">All Orders</span></a></li>
-								<li><a href="{% url 'new' %}" ><span class="title">Add Order</span></a></li>
-							</ul> -->
-    <!--end /submenu -->
-    <!-- </li> -->
-    <!--end /menu-li -->
-    <!-- END ORDER -->
+                <!-- BEGIN MAIN MENU -->
+                <ul id="main-menu" class="gui-controls">
 
-    <!-- BEGIN PRODUCT -->
-    <!-- <li class="gui-folder">
-							<a>
-								<div class="gui-icon"><i class="fa fa-cubes"></i></div>
-								<span class="title">Product</span>
-							</a> -->
-    <!--start submenu -->
-    <!-- <ul>
-                                <li><a href="{% url 'home_product'%}" ><span class="title">All Products</span></a></li>
-								<li><a href="{% url 'new_product' %}" ><span class="title">Add Product</span></a></li> -->
-    <!-- </ul> -->
-    <!--end /submenu -->
-    <!-- </li> -->
-    <!--end /menu-li -->
-    <!-- END PRODUCT -->
+                    <!-- BEGIN DASHBOARD -->
+                    <li>
+                        <a href="{% url 'home' %}" class="active">
+                            <div class="gui-icon"><i class="md md-home"></i></div>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <!--end /menu-li -->
+                    <!-- END DASHBOARD -->
 
-    <!-- BEGIN PROFILE -->
-    <!-- <li class="gui-folder">
-							<a>
-								<div class="gui-icon"><i class="fa fa-user"></i></div>
-								<span class="title">Profile</span>
-							</a> -->
-    <!--start submenu -->
-    <!-- <ul>
-								<li><a href="{% url 'change_password' %}" ><span class="title">Change Password</span></a></li>
-								<li><a href="{% url 'logout' %}" ><span class="title">Logout</span></a></li> -->
-    <!-- </ul> -->
-    <!--end /submenu -->
-    <!-- </li> -->
-    <!--end /menu-li -->
-    <!-- END PROFILE -->
+                    <!-- BEGIN ORDER -->
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><i class="fa fa-shopping-cart"></i></div>
+                            <span class="title">Order</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
+                            <li><a href="{% url 'home'%}"><span class="title">All Orders</span></a></li>
+                            <li><a href="{% url 'new' %}"><span class="title">Add Order</span></a></li>
+                        </ul>
+                        <!--end /submenu -->
+                    </li>
+                    <!--end /menu-li -->
+                    <!-- END ORDER -->
 
-    <!-- </ul> -->
-    <!--end .main-menu -->
-    <!-- END MAIN MENU -->
+                    <!-- BEGIN PRODUCT -->
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><i class="fa fa-cubes"></i></div>
+                            <span class="title">Product</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
+                            <li><a href="{% url 'home_product'%}"><span class="title">All Products</span></a></li>
+                            <li><a href="{% url 'new_product' %}"><span class="title">Add Product</span></a></li>
+                        </ul>
+                        <!--end /submenu -->
+                    </li>
+                    <!--end /menu-li -->
+                    <!-- END PRODUCT -->
 
-    <!-- <div class="menubar-foot-panel">
-						<small class="no-linebreak hidden-folded">
+                    <!-- BEGIN PROFILE -->
+                    <li class="gui-folder">
+                        <a>
+                            <div class="gui-icon"><i class="fa fa-user"></i></div>
+                            <span class="title">Profile</span>
+                        </a>
+                        <!--start submenu -->
+                        <ul>
+                            <li><a href="{% url 'change_password' %}"><span class="title">Change Password</span></a></li>
+                            <li><a href="{% url 'logout' %}"><span class="title">Logout</span></a></li>
+                        </ul>
+                        <!--end /submenu -->
+                    </li>
+                    <!--end /menu-li -->
+                    <!-- END PROFILE -->
+
+                </ul>
+                <!--end .main-menu -->
+                <!-- END MAIN MENU -->
+
+                <div class="menubar-foot-panel">
+                    <small class="no-linebreak hidden-folded">
 							<span class="opacity-75">Copyright &copy; {% now "Y" %}</span> <strong>Laundry City</strong>
 						</small>
-					</div> -->
-    <!-- </div> -->
-    <!--end .menubar-scroll-panel-->
-    <!-- </div> -->
-    <!--end #menubar-->
-    <!-- END MENUBAR -->
+                </div>
+            </div>
+            <!--end .menubar-scroll-panel-->
+        </div>
+        <!--end #menubar-->
+        <!-- END MENUBAR -->
 
-    <!-- </div> -->
+    </div>
     <!--end #base-->
     <!-- END BASE -->
 
