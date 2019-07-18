@@ -19,4 +19,4 @@ class Order (models.Model):
     product_id = models.ForeignKey(Product,on_delete=models.CASCADE)
     payment_option = models.CharField(max_length=50)
     order_status = models.CharField(max_length=50)
-    quantity = models.FloatField()
+    quantity = models.DecimalField(max_digits=50, decimal_places=5, default="")

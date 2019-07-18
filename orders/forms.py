@@ -21,7 +21,7 @@ class OrderForm(ModelForm):
     payment_option = forms.ChoiceField(required=False, choices=OPTIONS, initial= 'Postpay')
     product_id = forms.ModelChoiceField(queryset=Product.objects.filter(active='1'), empty_label='')
     delivery_date = forms.DateField(required=True)
-    quantity = forms.IntegerField(required=False)
+    quantity =  forms.DecimalField(max_digits=6,decimal_places=4,initial=1.00,required=False)
 
     class Meta:
         model = Order
@@ -47,7 +47,7 @@ class userform(ModelForm):
     payment_option = forms.ChoiceField(required=False, choices=OPTIONS, initial= 'Postpay')
     product_id = forms.ModelChoiceField(queryset=Product.objects.filter(active='1'), empty_label='')
     delivery_date = forms.DateField(required=True)
-    quantity = forms.IntegerField(required=False, initial=1)
+    quantity =  forms.DecimalField(max_digits=6,decimal_places=4,initial=1.00,required=False)
     order_status = forms.TypedChoiceField(required=False, choices=OPTIONS2, widget=forms.RadioSelect, initial='Confirm')
     class Meta:
         model = Order
