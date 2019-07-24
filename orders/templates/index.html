@@ -6,6 +6,7 @@
             <div class="col-md-4 sf-4 offset-4 ">
                 <h1 class="title-4 ">Welcome back,
                     <span>{{request.user.username}}.</span>
+
                 </h1>
                 <hr class="line-seprate ">
 
@@ -80,7 +81,10 @@
                                                 <td>{{ order.payment_option }}</td>
                                                 <td>{{ order.quantity }}</td>
                                                 <td>{{ order.product_id.price }}</td>
-                                                <td>{% widthratio order.product_id.price 1 order.quantity %}</td>
+                                                {% with total={% widthratio order.product_id.price 1 order.quantity|floatformat %} %}
+                                                <td>{{ total|floatformat }}</td>
+                                                {% endwith %}
+                                                <!-- <td>{% widthratio order.product_id.price 1 order.quantity|floatformat %}</td> -->
                                                 {% if order.order_status == 'Confirm' %}
                                                 <td><span class="badge">{{ order.order_status }}</span></td>
                                                 {% elif order.order_status == 'Ready' %}
