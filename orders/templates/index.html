@@ -65,6 +65,8 @@
                                                 <th>Price</th>
                                                 <th>Total</th>
                                                 <th>Status</th>
+
+
                                                 <th width="150px">Buttons</th>
                                             </tr>
                                         </thead>
@@ -80,11 +82,9 @@
                                                 <td>{{ order.product_id.product_name }}</td>
                                                 <td>{{ order.payment_option }}</td>
                                                 <td>{{ order.quantity }}</td>
+
                                                 <td>{{ order.product_id.price }}</td>
-                                                {% with total={% widthratio order.product_id.price 1 order.quantity|floatformat %} %}
-                                                <td>{{ total|floatformat }}</td>
-                                                {% endwith %}
-                                                <!-- <td>{% widthratio order.product_id.price 1 order.quantity|floatformat %}</td> -->
+                                                <td>{% widthratio order.product_id.price 1 order.quantity %}</td>
                                                 {% if order.order_status == 'Confirm' %}
                                                 <td><span class="badge">{{ order.order_status }}</span></td>
                                                 {% elif order.order_status == 'Ready' %}

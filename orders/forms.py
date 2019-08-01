@@ -22,10 +22,9 @@ class OrderForm(ModelForm):
     product_id = forms.ModelChoiceField(queryset=Product.objects.filter(active='1'), empty_label='')
     delivery_date = forms.DateField(required=True)
     quantity =  forms.DecimalField(max_digits=6,decimal_places=4,initial=1.00,required=False)
-
     class Meta:
         model = Order
-        fields = ['name','phone','email', 'address','delivery_date','product_id','payment_option','quantity','order_status']
+        fields = ['name','phone','email', 'address','delivery_date','product_id','payment_option','quantity','order_status' ]
 
 
 class ProductForm(ModelForm):
@@ -51,6 +50,6 @@ class userform(ModelForm):
     order_status = forms.TypedChoiceField(required=False, choices=OPTIONS2, widget=forms.RadioSelect, initial='Confirm')
     class Meta:
         model = Order
-        fields = ['name','phone', 'email', 'address','delivery_date','product_id','payment_option','quantity','order_status']
+        fields = ['name','phone', 'email', 'address','delivery_date','product_id','payment_option','quantity','order_status',]
         # exclude = ('order_status',)
 # =========modal form======= #

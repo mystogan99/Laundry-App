@@ -7,6 +7,21 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
+import requests
+import json
+
+URL = 'https://www.160by2.com/api/v1/sendCampaign'
+
+def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textMessage):
+  req_params = {
+  'apikey':apiKey,
+  'secret':secretKey,
+  'usetype':useType,
+  'phone': phoneNo, 
+  'message':textMessage,
+  'senderid':senderId
+  }
+  return requests.post(reqUrl, req_params)
 
 
 def succesfull(request):
@@ -23,6 +38,8 @@ def client(request):
             from_email = settings.EMAIL_HOST_USER
             to_email = form.cleaned_data['email']
             message = "Your order has been placed succesfully. Your valet with reach you soon."
+            phone = form.cleaned_data['phone']
+            response = sendPostRequest(URL, 'RJGUGSAI8ER4DL8SMWICU2TJ4RNGT1Y2', 'PAFW2F2SHJSX811P', 'stage', phone, '7014831301', 'Hey, your  order has been placed.' )
             try:
                 send_mail(subject, message, from_email, [to_email], fail_silently = False)
             except BadHeaderError:
