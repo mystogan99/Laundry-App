@@ -37,9 +37,9 @@ def client(request):
             subject = "Order from laundry city"
             from_email = settings.EMAIL_HOST_USER
             to_email = form.cleaned_data['email']
-            message = "Your order has been placed succesfully. Your valet with reach you soon."
+            message = "Hey, Your order has been placed succesfully. Your valet will reach you soon."
             phone = form.cleaned_data['phone']
-            response = sendPostRequest(URL, '3ALU0LA9XXBKQW7B1TLXXJBEBR7EFF3X', 'YCRBQSDJVPGZ00FO', 'stage', phone, '7014831301', 'Hey, your  order has been placed.' )
+            response = sendPostRequest(URL, '3ALU0LA9XXBKQW7B1TLXXJBEBR7EFF3X', 'YCRBQSDJVPGZ00FO', 'stage', phone, '7014831301', 'Hey, Your order has been placed succesfully. Your valet will reach you soon.' )
             try:
                 send_mail(subject, message, from_email, [to_email], fail_silently = False)
             except BadHeaderError:
