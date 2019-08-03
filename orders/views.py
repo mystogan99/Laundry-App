@@ -26,7 +26,7 @@ def client(request):
             to_email = form.cleaned_data['email']
             message = "Hey, Your order has been placed succesfully. Your valet will reach you soon."
             phone = form.cleaned_data['phone']
-            response = sendPostRequest(URL, 'RJGUGSAI8ER4DL8SMWICU2TJ4RNGT1Y2', 'PAFW2F2SHJSX811P', 'stage', phone, '7014831301', 'Hey, Your order has been placed succesfully. Your valet will reach you soon.' )
+            response = sendPostRequest(URL, 'RJGUGSAI8ER4DL8SMWICU2TJ4RNGT1Y2', 'PAFW2F2SHJSX811P', 'prod', phone, '7014831301', 'Hey, Your order has been placed succesfully. Your valet will reach you soon.' )
             print(response.text)
             try:
                 send_mail(subject, message, from_email, [to_email], fail_silently = False)
