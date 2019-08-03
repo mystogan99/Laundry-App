@@ -7,22 +7,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-import requests
-import json
+from .sms import sendPostRequest
 
 URL = 'https://www.160by2.com/api/v1/sendCampaign'
-
-def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textMessage):
-  req_params = {
-  'apikey':apiKey,
-  'secret':secretKey,
-  'usetype':useType,
-  'phone': phoneNo, 
-  'message':textMessage,
-  'senderid':senderId
-  }
-  return requests.post(reqUrl, req_params)
-
 
 def succesfull(request):
      return render(request, 'succesfull.html')
@@ -39,7 +26,8 @@ def client(request):
             to_email = form.cleaned_data['email']
             message = "Hey, Your order has been placed succesfully. Your valet will reach you soon."
             phone = form.cleaned_data['phone']
-            response = sendPostRequest(URL, '3ALU0LA9XXBKQW7B1TLXXJBEBR7EFF3X', 'YCRBQSDJVPGZ00FO', 'stage', phone, '7014831301', 'Hey, Your order has been placed succesfully. Your valet will reach you soon.' )
+            response = sendPostRequest(URL, 'RJGUGSAI8ER4DL8SMWICU2TJ4RNGT1Y2', 'PAFW2F2SHJSX811P', 'stage', phone, '7014831301', 'Hey, Your order has been placed succesfully. Your valet will reach you soon.' )
+            print(response.text)
             try:
                 send_mail(subject, message, from_email, [to_email], fail_silently = False)
             except BadHeaderError:
