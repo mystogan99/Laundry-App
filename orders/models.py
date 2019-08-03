@@ -4,11 +4,11 @@ from django.db import models
 class Product(models.Model):
 	product_name = models.CharField(max_length=200)
 	product_details = models.TextField()
-	price = models.DecimalField(max_digits=50, decimal_places=5,)
+	price = models.DecimalField(max_digits=50, decimal_places=2,)
 	active = models.IntegerField(default='1')
 
 	def __str__(self):
-		return '%s (%s tk)' % (self.product_name, self.price)
+		return '%s (%s)' % (self.product_name, self.price)
 
 class Order (models.Model):
     name = models.CharField(max_length=200)
@@ -19,4 +19,4 @@ class Order (models.Model):
     product_id = models.ForeignKey(Product,on_delete=models.CASCADE)
     payment_option = models.CharField(max_length=50)
     order_status = models.CharField(max_length=50)
-    quantity = models.DecimalField(max_digits=50, decimal_places=5, default="")
+    quantity = models.DecimalField(max_digits=50, decimal_places=2, default="")
