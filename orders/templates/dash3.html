@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dashboard</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets5/images/favicon.png' %}">
     <!-- Custom Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'assets5/css/style.css' %}" rel="stylesheet">
 
 </head>
 
@@ -41,10 +41,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                    <b class="logo-abbr"><img src="{% static 'assets5/images/logo.png' %}" alt=""> </b>
+                    <span class="logo-compact"><img src="{% static 'assets5/images/logo-compact.png' %}" alt=""></span>
                     <span class="brand-title">
-                        <img src="images/logo-text.png" alt="">
+                        <img src="{% static 'assets5/images/logo-text.png' %}" alt="">
                     </span>
                 </a>
             </div>
@@ -93,7 +93,7 @@
                                     <ul>
                                         <li class="notification-unread">
                                             <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img" src="images/avatar/1.jpg" alt="">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'assets5/images/avatar/1.jpg' %}" alt="">
                                                 <div class="notification-content">
                                                     <div class="notification-heading">Saiful Islam</div>
                                                     <div class="notification-timestamp">08 Hours ago</div>
@@ -103,7 +103,7 @@
                                         </li>
                                         <li class="notification-unread">
                                             <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img" src="images/avatar/2.jpg" alt="">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'assets5/images/avatar/2.jpg' %}" alt="">
                                                 <div class="notification-content">
                                                     <div class="notification-heading">Adam Smith</div>
                                                     <div class="notification-timestamp">08 Hours ago</div>
@@ -113,7 +113,7 @@
                                         </li>
                                         <li>
                                             <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img" src="images/avatar/3.jpg" alt="">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'assets5/images/avatar/3.jpg' %}" alt="">
                                                 <div class="notification-content">
                                                     <div class="notification-heading">Barak Obama</div>
                                                     <div class="notification-timestamp">08 Hours ago</div>
@@ -123,7 +123,7 @@
                                         </li>
                                         <li>
                                             <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img" src="images/avatar/4.jpg" alt="">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'assets5/images/avatar/4.jpg' %}" alt="">
                                                 <div class="notification-content">
                                                     <div class="notification-heading">Hilari Clinton</div>
                                                     <div class="notification-timestamp">08 Hours ago</div>
@@ -205,7 +205,7 @@
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="images/user/1.png" height="40" width="40" alt="">
+                                <img src="{% static 'assets5/images/user/1.png' %}" height="40" width="40" alt="">
                             </div>
                             <div class="drop-down dropdown-profile   dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -414,15 +414,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Basic List Group</h4>
-                                <!-- <div class="basic-list-group">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">Cras justo odio</li>
-                                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                                        <li class="list-group-item">Morbi leo risus</li>
-                                        <li class="list-group-item">Porta ac consectetur ac</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
-                                    </ul>
-                                </div> -->
+                                {% if messages %} {% for message in messages %}
+                                <div {% if message.tags %} class="alert {{ message.tags }} text-center " {% endif %}>
+                                    <a href="# " class="close " data-dismiss="alert " aria-label="close ">&times;</a> {{ message }}
+                                </div>
+                                {% endfor %} {% endif %} {% block body %} {% endblock %}
                             </div>
                         </div>
                     </div>
@@ -637,11 +633,11 @@
         <!--**********************************
         Scripts
     ***********************************-->
-        <script src="plugins/common/common.min.js"></script>
-        <script src="js/custom.min.js"></script>
-        <script src="js/settings.js"></script>
-        <script src="js/gleek.js"></script>
-        <script src="js/styleSwitcher.js"></script>
+        <script src="{% static 'assets5/plugins/common/common.min.js' %}"></script>
+        <script src="{% static 'assets5/js/custom.min.js' %}"></script>
+        <script src="{% static 'assets5/js/settings.js' %}"></script>
+        <script src="{% static 'assets5/js/gleek.js' %}"></script>
+        <script src="{% static 'assets5/js/styleSwitcher.js' %}"></script>
 
 </body>
 
