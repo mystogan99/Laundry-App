@@ -449,7 +449,7 @@
 
 
                                                                 <div class="form-group floating-label">
-                                                                    <label for="regular2">Customer Name</label> {{ form.name | add_class:'form-control' }}
+                                                                    <label for="regular2">Your Name</label> {{ form.name | add_class:'form-control' }}
 
                                                                 </div>
                                                                 <div class="form-group floating-label">
@@ -471,11 +471,11 @@
                                                                 <hr>
 
                                                                 <div class="form-group">
-                                                                    <label for="regular2">Delivery Date</label> {{ form.delivery_date | add_class:'form-control' | attr:'type:date'}}
+                                                                    <label for="regular2">Your preferable date for pickup: </label> {{ form.delivery_date | add_class:'form-control' | attr:'type:date'}}
 
                                                                 </div>
                                                                 <div class="form-group floating-label">
-                                                                    <label for="textarea2">Product ID</label> {{ form.product_id | add_class:'form-control select2-list' | attr:'id:product_id'}}
+                                                                    <label for="textarea2">Type of wash</label> {{ form.product_id | add_class:'form-control select2-list' | attr:'id:product_id'}}
 
                                                                 </div>
                                                                 <div class="row">
@@ -487,7 +487,10 @@
                                                                     </div>
                                                                     <div class="col-sm-6">
                                                                         <div class="form-group floating-label">
-                                                                            <label for="regular2">Quantity</label> {{ form.quantity | add_class:'form-control'}}
+                                                                            <label for="regular2">Quantity</label>
+                                                                            <br>
+
+                                                                            <br> {{ form.quantity | add_class:'form-control'}}
 
                                                                         </div>
 
@@ -496,10 +499,11 @@
                                                             </div>
 
                                                             <div class="col-md-10">
+
                                                                 <hr>
 
                                                                 <label class="radio-inline radio-styled col-sm-2">
-                                                        <b>Order Status :</b>
+                                                        <b class="row">Order Status :</b>
                                                       </label>
                                                                 <div class="col-md-10">
                                                                     <div class="row-border">
