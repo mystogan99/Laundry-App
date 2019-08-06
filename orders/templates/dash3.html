@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +11,19 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets5/images/favicon.png' %}">
     <!-- Custom Stylesheet -->
     <link href="{% static 'assets5/css/style.css' %}" rel="stylesheet">
+
+    <!-- BEGIN STYLESHEETS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css' />
+    <!-- <link type="text/css " rel="stylesheet " href="{% static 'css/bootstrap.css' %} " /> -->
+    <!-- <link type="text/css " rel="stylesheet " href="{% static 'css/materialadmin.css' %} " /> -->
+    <link type="text/css " rel="stylesheet " href="{% static 'css/font-awesome.min.css' %} " />
+    <link type="text/css " rel="stylesheet " href="{% static 'css/material-design-iconic-font.min.css' %} " />
+    <link type="text/css " rel="stylesheet " href="{% static 'css/libs/DataTables/jquery.dataTables.css' %} " />
+    <link type="text/css " rel="stylesheet " href="{% static 'css/libs/DataTables/extensions/dataTables.colVis.css' %} " />
+    <link type="text/css " rel="stylesheet " href="{% static 'css/libs/DataTables/extensions/dataTables.tableTools.css' %} " />
+    <link type="text/css " rel="stylesheet " href="{% static 'css/libs/select2/select2.css' %} " />
+    <link type="text/css " rel="stylesheet " href="{% static 'css/print.css' %} " />
+    <!-- END STYLESHEETS -->
 
 </head>
 
@@ -633,11 +647,64 @@
         <!--**********************************
         Scripts
     ***********************************-->
+
+
+
         <script src="{% static 'assets5/plugins/common/common.min.js' %}"></script>
         <script src="{% static 'assets5/js/custom.min.js' %}"></script>
         <script src="{% static 'assets5/js/settings.js' %}"></script>
         <script src="{% static 'assets5/js/gleek.js' %}"></script>
         <script src="{% static 'assets5/js/styleSwitcher.js' %}"></script>
+
+        <!-- ===================================js files of layout======================== -->
+
+        <!-- BEGIN JAVASCRIPT -->
+        <script src="{% static 'js/libs/jquery/jquery-1.11.2.min.js' %} "></script>
+        <script src="{% static 'js/libs/jquery/jquery-migrate-1.2.1.min.js' %} "></script>
+        <script src="{% static 'js/libs/bootstrap/bootstrap.min.js' %} "></script>
+
+        <script src="{% static 'js/libs/nanoscroller/jquery.nanoscroller.min.js' %} "></script>
+
+        <!-- DATATABLE -->
+        <script src="{% static 'js/libs/DataTables/jquery.dataTables.min.js' %} "></script>
+        <script src="{% static 'js/libs/DataTables/extensions/ColVis/js/dataTables.colVis.min.js' %} "></script>
+        <script src="{% static 'js/libs/DataTables/extensions/TableTools/js/dataTables.tableTools.min.js' %} "></script>
+
+        <script src="{% static 'js/core/App.js' %} "></script>
+        <script src="{% static 'js/core/AppNavigation.js' %} "></script>
+        <script src="{% static 'js/core/AppOffcanvas.js' %} "></script>
+        <script src="{% static 'js/core/AppCard.js' %} "></script>
+        <script src="{% static 'js/core/AppForm.js' %} "></script>
+        <script src="{% static 'js/core/AppVendor.js' %} "></script>
+        <script src="{% static 'js/core/Demo.js' %} "></script>
+        <script src="{% static 'js/core/DemoTableDynamic.js' %} "></script>
+        <script src="{% static 'js/libs/select2/select2.min.js' %} "></script>
+        <!-- END JAVASCRIPT -->
+
+        <script>
+            // =========================================================================
+            // SELECT2
+            // =========================================================================
+
+            $(document).ready(function() {
+                $("#product_id ").select2();
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#example').dataTable({
+                    "sDom ": 'T<"clear ">lfrtip',
+                    "oTableTools ": {
+                        "aButtons ": [
+                            "print "
+                        ]
+                    }
+                });
+            });
+        </script>
+
+        <!-- ===================================js files of layout======================== -->
+
 
 </body>
 
