@@ -49,7 +49,7 @@ def client(request):
 @login_required
 def index(request):
     orders = Order.objects.all()
-    return render(request, 'dash4.html', {'orders': orders})
+    return render(request, 'index.html', {'orders': orders})
 
 @login_required
 def show(request, order_id):
