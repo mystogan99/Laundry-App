@@ -483,7 +483,8 @@
                                     <h4 class="card-title">Basic List Group</h4>
                                     <div>
                                         <a href="{% url 'new' %}"><button type="button" class="btn mb-1 btn-rounded btn-info"><span class="btn-icon-left"><i class="fa fa-plus color-info"></i> </span>Add Order</button></a> &nbsp; &nbsp;&nbsp;
-                                        <a href="{% url 'new_product' %}"></a><button type="button" class="btn mb-1 btn-rounded btn-danger"><span class="btn-icon-left"><i class="fa fa-envelope color-danger"></i> </span>Add Service</button></a>
+                                        <a href="{% url 'new_product' %}"><button type="button" class="btn mb-1 btn-rounded btn-danger"><span class="btn-icon-left"><i class="fa fa-fa-envelope color-danger"></i> </span>Add Product</button></a>
+
                                     </div>
                                     {% if messages %} {% for message in messages %}
                                     <div {% if message.tags %} class="alert {{ message.tags }} text-center " {% endif %}>
@@ -785,4 +786,4 @@
 
 </body>
 
-</html>x
+</html>
