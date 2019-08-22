@@ -1,6 +1,6 @@
-{% extends 'dash2.html' %} {% block title %} All Orders {% endblock %} {% block body %}
-<!-- 
-</section>
+{% extends 'dash3.html' %} {% block title %} All Orders {% endblock %} {% block body %}
+
+<!-- </section>
 
 <div class="table-data__tool-right">
     <div class='row'>
@@ -20,91 +20,93 @@
                     <i class="zmdi zmdi-plus" ></i> <a href="{% url 'new_product' %}">add product</a></button>
                 </div>
             </div>
-        </div> -->
-<!-- <section> -->
-<!-- <button type="button" class="btn btn-outline-info">Info</button> -->
-<!-- <div class="section-body"> -->
-<!-- BEGIN DATATABLE 2 -->
-<!-- <div class="row"> -->
-<!-- <div class="col-lg-12"> -->
-<!-- <div class="card"> -->
-<!-- <div class="card-head bg-dark text-white">
-                    <header>All Orders Data</header>
-                    <div class="tools">
-                        <a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
-                        <a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
-                    </div>
-                </div> -->
-<!-- <div class="card-body"> -->
-<div class="table-responsive">
-    <table id="datatable2" class="table order-column hover">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Pickup Date</th>
-                <th>Type of Wash</th>
-                <th>Payment Option</th>
-                <th>Clothes (in KG)</th>
-                <th>Cost/ KG</th>
-                <th>Total</th>
-                <th>Status</th>
-
-
-                <th width="150px">Buttons</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for order in orders %}
-            <tr class="gradeX">
-                <td>{{ order.id }}</td>
-                <td>{{ order.name }}</td>
-                <td>{{ order.phone }}</td>
-                <td>{{ order.email }}</td>
-                <td>{{ order.address }}</td>
-                <td>{{ order.delivery_date }}</td>
-                <td>{{ order.product_id.product_name }}</td>
-                <td>{{ order.payment_option }}</td>
-                <td>{{ order.quantity }}</td>
-
-                <td>{{ order.product_id.price }}</td>
-                <td>{% widthratio order.product_id.price 1 order.quantity %}</td>
-                {% if order.order_status == 'Confirm' %}
-                <td><span class="badge">{{ order.order_status }}</span></td>
-                {% elif order.order_status == 'Ready' %}
-                <td><span class="badge" style="background: #ff9800"> {{ order.order_status }}</span></td>
-                {% elif order.order_status == 'Send' %}
-                <td><span class="badge" style="background: #0c84e4"> {{ order.order_status }}</span></td>
-                {% elif order.order_status == 'Delivered' %}
-                <td><span class="badge" style="background: #0aa89e"> {{ order.order_status }}</span></td>
-                {% elif order.order_status == 'Returned' %}
-                <td><span class="badge" style="background: #f44336"> {{ order.order_status }}</span></td>
-                {% elif order.order_status == 'Cancelled' %}
-                <td><span class="badge" style="background: #313534"> {{ order.order_status }}</span></td>
-                {% endif %}
-                <td>
-                    <a href="{% url 'delete' order.id %}" class="btn ink-reaction btn-floating-action btn-danger" onclick="return confirm('Are you sure you want to delete this?')"><i class="md md-delete"></i> </a>
-                    <a href="{% url 'edit' order.id %}" class="btn ink-reaction btn-floating-action btn-warning"><i class="md md-edit"></i> </a>
-                    <a href="{% url 'show' order.id %}" class="btn ink-reaction btn-floating-action btn-primary"><i class="md md-print"></i> </a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        </div>
+        <section>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <div class="section-body">
+                BEGIN DATATABLE 2
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-head bg-dark text-white">
+                                <header>All Orders Data</header>
+                                <div class="tools">
+                                    <a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
+                                    <a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
+                                </div> -->
 </div>
-<!--end .table-responsive -->
-<!-- </div>
-        </div> -->
-<!-- </div> -->
-<!--end .col -->
-<!-- </div> -->
-<!--end .row -->
-<!-- END DATATABLE 2 -->
+<div class="card-body">
+    <div class="table-responsive">
+        <table id="datatable2" class="table order-column hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Pickup Date</th>
+                    <th>Type of Wash</th>
+                    <th>Payment Option</th>
+                    <th>Clothes (in KG)</th>
+                    <th>Cost/ KG</th>
+                    <th>Total</th>
+                    <th>Status</th>
 
-<!-- </div> -->
-<!--end .section-body -->
-<!-- </section> -->
-{% endblock %}
+
+                    <th width="180px">Buttons</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr class="gradeX">
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.name }}</td>
+                    <td>{{ order.phone }}</td>
+                    <td>{{ order.email }}</td>
+                    <td>{{ order.address }}</td>
+                    <td>{{ order.delivery_date }}</td>
+                    <td>{{ order.product_id.product_name }}</td>
+                    <td>{{ order.payment_option }}</td>
+                    <td>{{ order.quantity }}</td>
+
+                    <td>{{ order.product_id.price }}</td>
+                    <td>{% widthratio order.product_id.price 1 order.quantity %}</td>
+                    {% if order.order_status == 'Confirm' %}
+                    <td><span class="btn badge btn-rounded btn" style="background: #1beb25e0"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    <!--  <td><span class="badge">{{ order.order_status }}</span></td> -->
+                    {% elif order.order_status == 'Ready' %}
+                    <td><span class="btn badge btn-rounded btn" style="background: #ff9800"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    {% elif order.order_status == 'Send' %}
+                    <td><span class="btn badge btn-rounded btn" style="background: #0c84e4"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    {% elif order.order_status == 'Delivered' %}
+                    <td><span class="btn badge btn-rounded btn" style="background: #00fae9"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    {% elif order.order_status == 'Returned' %}
+                    <td><span class="btn badge btn-rounded btn" style="background: #f44336"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    {% elif order.order_status == 'Cancelled' %}
+                    <td><span class="btn badge btn-rounded btn" style="background: #313534"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    {% endif %}
+                    <td>
+                        <a href="{% url 'delete' order.id %}" class="btn mb-1 btn-rounded btn-danger" onclick="return confirm('Are you sure you want to delete this?')"><i class="md md-delete"></i> </a>
+                        <!--  <a href="{% url 'delete' order.id %}" class="btn ink-reaction btn-floating-action btn-danger" onclick="return confirm('Are you sure you want to delete this?')"><i class="md md-delete"></i> </a> -->
+                        <a href="{% url 'edit' order.id %}" class="btn mb-1 btn-rounded btn-warning"><i class="md md-edit"></i> </a>
+                        <!--  <a href="{% url 'edit' order.id %}" class="btn ink-reaction btn-floating-action btn-warning"><i class="md md-edit"></i> </a> -->
+                        <a href="{% url 'show' order.id %}" class="btn mb-1 btn-rounded btn-success"><i class="md md-print"></i> </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!--end .table-responsive -->
+    <!-- </div>
+        </div> -->
+    <!-- </div> -->
+    <!--end .col -->
+    <!-- </div> -->
+    <!--end .row -->
+    <!-- END DATATABLE 2 -->
+
+    <!-- </div> -->
+    <!--end .section-body -->
+    <!-- </section> -->badge {% endblock %}

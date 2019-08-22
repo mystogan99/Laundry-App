@@ -2,23 +2,24 @@
 #header,
 #content .section-header,
 .offcanvas-holder {
-	display: none;
+    display: none;
 }
 
 #content,
 #content .section-body {
-	padding: 0;
+    padding: 0;
 }
 
 .card-printable {
-	display: block;
+    display: block;
 }
+
 .card-printable .card-head {
-	display: none;
+    display: none;
 }
 
 body,
-#content > section {
-	background-color: #ffffff;
-	border: 0;
+#content>section {
+    background-color: #ffffff;
+    border: 0;
 }
