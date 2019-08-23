@@ -1,4 +1,4 @@
-{% extends 'dash2.html' %} {% load staticfiles %} {% block title %} Print Order {% endblock %} {% block body %} {% for order in order %}
+{% extends 'layout-horizontal.html' %} {% load staticfiles %} {% block title %} Print Order {% endblock %} {% block body %} {% for order in order %}
 <section>
     <div class="section-header">
         <ol class="breadcrumb">
@@ -48,7 +48,7 @@
 												</address>
                             </div>
                             <!--end .col -->
-                            <div class="col-xs-4">
+                            <div class="col-xs-8">
                                 <div class="well">
                                     <div class="clearfix">
                                         <div class="pull-left"> INVOICE NO : </div>
