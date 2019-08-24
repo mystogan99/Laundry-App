@@ -2,7 +2,7 @@
     "use strict"
 
     new quixSettings({
-        version: "light", //2 options "light" and "dark"
+        version: "dark", //2 options "light" and "dark"
         layout: "horizontal", //2 options, "vertical" and "horizontal"
         navheaderBg: "color_1", //have 10 options, "color_1" to "color_10"
         headerBg: "color_1", //have 10 options, "color_1" to "color_10"
