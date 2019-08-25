@@ -189,7 +189,7 @@ a.cke_dialog_tab_disabled {
 }
 
 a.cke_dialog_close_button {
-    background-image: url(images/close.png);
+    background-image: url("images/close.998bfd6b3607.png");
     background-repeat: no-repeat;
     background-position: 50%;
     position: absolute;
@@ -216,7 +216,7 @@ a.cke_dialog_close_button {
 }
 
 .cke_hidpi a.cke_dialog_close_button {
-    background-image: url(images/hidpi/close.png);
+    background-image: url("images/hidpi/close.c071b5338dc8.png");
     background-size: 16px
 }
 
@@ -501,7 +501,7 @@ select.cke_dialog_ui_input_select {
 
 .cke_dialog a.cke_btn_reset {
     float: right;
-    background: url(images/refresh.png) top left no-repeat;
+    background: url("images/refresh.285e15bdd3d2.png") top left no-repeat;
     width: 16px;
     height: 16px;
     border: 1px none;
@@ -510,7 +510,7 @@ select.cke_dialog_ui_input_select {
 
 .cke_hidpi .cke_dialog a.cke_btn_reset {
     background-size: 16px;
-    background-image: url(images/hidpi/refresh.png)
+    background-image: url("images/hidpi/refresh.d8eae619f297.png")
 }
 
 .cke_rtl .cke_dialog a.cke_btn_reset {
@@ -534,11 +534,11 @@ select.cke_dialog_ui_input_select {
 }
 
 .cke_dialog a.cke_btn_locked {
-    background-image: url(images/lock.png)
+    background-image: url("images/lock.ea07d6ef76fb.png")
 }
 
 .cke_dialog a.cke_btn_unlocked {
-    background-image: url(images/lock-open.png)
+    background-image: url("images/lock-open.f04649cc8c48.png")
 }
 
 .cke_rtl .cke_dialog a.cke_btn_locked,
@@ -552,11 +552,11 @@ select.cke_dialog_ui_input_select {
 }
 
 .cke_hidpi .cke_dialog a.cke_btn_locked {
-    background-image: url(images/hidpi/lock.png)
+    background-image: url("images/hidpi/lock.cfab0f8b8684.png")
 }
 
 .cke_hidpi .cke_dialog a.cke_btn_unlocked {
-    background-image: url(images/hidpi/lock-open.png)
+    background-image: url("images/hidpi/lock-open.9e24f2bfd6a3.png")
 }
 
 .cke_dialog a.cke_btn_locked .cke_icon {
