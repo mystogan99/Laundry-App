@@ -16671,7 +16671,6 @@ table.dataTable thead .sorting::after {
     float: left;
     height: 6rem;
     width: 6rem;
-    background: url("http://michaeltruong.ca/images/logo1.png") no-repeat;
     background-size: 6rem 6rem;
 }
 
@@ -16679,7 +16678,6 @@ table.dataTable thead .sorting::after {
     float: left;
     height: 6rem;
     width: 6rem;
-    background: url("http://michaeltruong.ca/images/client.jpg") no-repeat;
     background-size: 6rem 6rem;
     border-radius: 5rem;
 }

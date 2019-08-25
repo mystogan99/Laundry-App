@@ -15915,18 +15915,16 @@ table.dataTable thead .sorting::after {
 .card-img-btn {
     position: absolute;
     bottom: 15px;
-    left: 30px;
+    g left: 30px;
 }
 
 .card-bg-img-1 {
-    background: url(../../assets/images/big/img6.jpg);
     background-position: center;
     background-size: cover;
     min-height: 300px;
 }
 
 .card-bg-img-2 {
-    background: url(../../assets/images/big/img6.jpg);
     background-position: center;
     background-size: cover;
     min-height: 400px;
@@ -16638,7 +16636,6 @@ table.dataTable thead .sorting::after {
 }
 
 #password-page1 body {
-    background: url(../../assets/images/background/password-bg.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
