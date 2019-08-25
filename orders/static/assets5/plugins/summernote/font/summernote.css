@@ -3,7 +3,6 @@
     font-style: normal;
     font-weight: normal;
     format("woff"),
-    url("./font/summernote.ttf?dbafe969167589eda84514394d126413") format("truetype")
 }
 
 [class^="note-icon-"]:before,
