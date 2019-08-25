@@ -16845,7 +16845,6 @@ table.dataTable thead .sorting::after {
 }
 
 #register-page1 body {
-    background: url(../../assets/images/background/register-bg.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16854,7 +16853,6 @@ table.dataTable thead .sorting::after {
 }
 
 #login-page2 body {
-    background: url(../../assets/images/background/login-register2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16874,7 +16872,6 @@ table.dataTable thead .sorting::after {
 }
 
 #login-page1 body {
-    background: url(../../assets/images/background/login-bg.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16890,7 +16887,6 @@ table.dataTable thead .sorting::after {
 }
 
 #userLock-page1 body {
-    background: url(../../assets/images/background/user-lock-bg.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
