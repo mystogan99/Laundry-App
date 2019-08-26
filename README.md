@@ -6,6 +6,8 @@ Order management system built for laundry city.
 ```
 foo@bar:~$ source ./venv/bin/activate
 ```
+- Add credentials for Google SMTP in settings.py
+- Add your 160by2 API keys in sms.py 
 
 ## Install
 
