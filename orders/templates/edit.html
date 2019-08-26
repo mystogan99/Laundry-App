@@ -18,12 +18,14 @@
                 <div class="card2">
                     <div class="card-head">
                         <div class="card-head style-primary">
-                            <header class="card-head ">Add Order</header>
+                            <header class="card-head ">
+                                <font color="black" size="10"><strong>Edit Order</strong></font>
+                            </header>
                         </div>
-                        <div class="tools">
+                        <!-- <div class="tools">
                             <a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
                             <a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card-body">
 
@@ -31,7 +33,11 @@
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <header>Customer Info</header>
+                                    <header>
+                                        <p style="text-align:center;"><strong>Customer Info</strong></p>
+                                    </header>
+                                    <hr>
+                                    <br>
                                     <div class="form-group floating-label">
                                         {{ form.name | add_class:'form-control' }}
                                         <label for="regular2">Customer Name</label>
@@ -50,7 +56,10 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <header>Order Info</header>
+                                    <p style="text-align:center;"><strong>Order Info</strong></p>
+                                    <hr>
+
+                                    <br>
                                     <div class="form-group">
                                         {{ form.delivery_date | add_class:'form-control' | attr:'type:date' }}
                                         <label for="regular2">Delivery Dater</label>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dashboard</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets5/images/favicon.png' %}">
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets5/images/favicon.png' %}"> -->
     <!-- Custom Stylesheet -->
     <link href="{% static 'assets5/css/style.css' %}" rel="stylesheet">
 
@@ -54,12 +54,12 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr"><img src="{% static 'assets5/images/logo.png' %}" alt=""> </b>
-                    <span class="logo-compact"><img src="{% static 'assets5/images/logo-compact.png' %}" alt=""></span>
-                    <span class="brand-title">
+                <a href="{% url 'home' %}">
+                    <!-- <b class="logo-abbr"><img src="{% static 'assets5/images/logo.png' %}" alt=""> </b> -->
+                    <span class="logo-compact"><img src="{% static 'assets5/images/LaundryCity.png' %}" alt=""></span>
+                    <!-- <span class="brand-title">
                         <img src="{% static 'assets5/images/logo-text.png' %}" alt="">
-                    </span>
+                    </span> -->
                 </a>
             </div>
         </div>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="header-left">
-                    <div class="input-group icons">
+                    <!-- <div class="input-group icons">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
                         </div>
@@ -89,11 +89,11 @@
                                 <input type="text" class="form-control" placeholder="Search">
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="header-right">
                     <ul class="clearfix">
-                        <li class="icons dropdown">
+                        <!-- <li class="icons dropdown">
                             <a href="javascript:void(0)">
                                 <i class="mdi mdi-email-outline"></i>
                                 <span class="badge gradient-1 badge-pill badge-primary">3</span>
@@ -184,10 +184,10 @@
                                             <a href="javascript:void()">
                                                 <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
-                                                    <h6 class="notification-heading">Event Ended Successfully</h6>
-                                                    <span class="notification-text">One hour ago</span>
-                                                </div>
-                                            </a>
+                                        user-img c-pointer position-relative            <h6 class="notification-heading">Event Ended Successfully</h6>
+                                        user-img c-pointer position-relative            <span class="notification-text">One hour ago</span>
+                                        user-img c-pointer position-relative        </div>
+                                        user-img c-pointer position-relative    </a>
                                         </li>
                                         <li>
                                             <a href="javascript:void()">
@@ -202,24 +202,24 @@
 
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li class="icons dropdown d-none d-md-flex">
                             <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
-                                <span>English</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                                <span>{{request.user.username}}</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
                             </a>
                             <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
                                 <div class="dropdown-content-body">
                                     <ul>
-                                        <li><a href="javascript:void()">English</a></li>
-                                        <li><a href="javascript:void()">Dutch</a></li>
+                                        <li><a href="javascript:void()">{{request.user.username}}</a></li>
+                                        <!-- <li><a href="javascript:void()">Dutch</a></li> -->
                                     </ul>
                                 </div>
                             </div>
                         </li>
                         <li class="icons dropdown">
-                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                            <div class="img-fluid" data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="{% static 'assets5/images/user/1.png' %}" height="40" width="40" alt="">
+                                <img src="{% static 'assets5/images/user/ss.png' %}" height="60" width="100" alt="">
                             </div>
                             <div class="drop-down dropdown-profile   dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -227,19 +227,19 @@
                                         <li>
                                             <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
-                                        <li>
-                                            <a href="email-inbox.html"><i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill badge-primary">3</div></a>
-                                        </li>
+
 
                                         <hr class="my-2">
                                         <li>
-                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
+                                            <a href="{% url 'change_password' %}"><i class="icon-lock"></i> <span>Change Password</span></a>
                                         </li>
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="{% url 'logout' %}"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
+
+
                     </ul>
                 </div>
             </div>

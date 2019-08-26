@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^product/delete/(?P<product_id>\d+)/$', views.destroy_product, name='delete_product'),
     url(r'^users/login/$', auth.login, {'template_name': 'login2.html'}, name='login'),
     url(r'^users/logout/$', auth.logout, {'next_page': 'login'}, name='logout'),
-    url(r'^users/change_password/$', login_required(auth.password_change), {'post_change_redirect' : '/','template_name': 'change_password.html'}, name='change_password'),
+    url(r'^users/change_password/$', login_required(auth.password_change), {'post_change_redirect' : '/HolyGrail','template_name': 'change_password.html'}, name='change_password'),
 ]
