@@ -214,15 +214,15 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="#"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                                         <!--  -->
 
                                         <hr class="my-2">
                                         <li>
-                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Change Password</span></a>
+                                            <a href="{% url 'change_password' %}"><i class="icon-lock"></i> <span>Change Password</span></a>
                                         </li>
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="{% url 'logout' %}"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
