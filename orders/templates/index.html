@@ -73,25 +73,25 @@
                     <td>{{ order.product_id.price }}</td>
                     <td>{% widthratio order.product_id.price 1 order.quantity %}</td>
                     {% if order.order_status == 'Confirm' %}
-                    <td><span class="btn badge btn-rounded btn" style="background: #1beb25e0"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    <td><span class="btn badge btn-rounded btn" style="background: #1beb83e0"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
                     <!--  <td><span class="badge">{{ order.order_status }}</span></td> -->
                     {% elif order.order_status == 'Ready' %}
                     <td><span class="btn badge btn-rounded btn" style="background: #ff9800"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
                     {% elif order.order_status == 'Send' %}
-                    <td><span class="btn badge btn-rounded btn" style="background: #0c84e4"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    <td><span class="btn badge btn-rounded btn" style="background: #00fae9"> <font size="2" style="color:black">{{ order.order_status }}</font></span></td>
                     {% elif order.order_status == 'Delivered' %}
                     <td><span class="btn badge btn-rounded btn" style="background: #00fae9"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
                     {% elif order.order_status == 'Returned' %}
                     <td><span class="btn badge btn-rounded btn" style="background: #f44336"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
                     {% elif order.order_status == 'Cancelled' %}
-                    <td><span class="btn badge btn-rounded btn" style="background: #313534"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
+                    <td><span class="btn badge btn-rounded btn" style="background: #f44336"><font size="2" style="color:black">{{ order.order_status }}</font></span></td>
                     {% endif %}
                     <td>
                         <a href="{% url 'delete' order.id %}" class="btn mb-1 btn-rounded btn-danger" onclick="return confirm('Are you sure you want to delete this?')"><i class="md md-delete"></i> </a>
                         <!--  <a href="{% url 'delete' order.id %}" class="btn ink-reaction btn-floating-action btn-danger" onclick="return confirm('Are you sure you want to delete this?')"><i class="md md-delete"></i> </a> -->
-                        <a href="{% url 'edit' order.id %}" class="btn mb-1 btn-rounded btn-warning"><i class="md md-edit"></i> </a>
+                        <a href="{% url 'edit' order.id %}" class="btn mb-1 btn-rounded "><i class="md md-edit"></i> </a>
                         <!--  <a href="{% url 'edit' order.id %}" class="btn ink-reaction btn-floating-action btn-warning"><i class="md md-edit"></i> </a> -->
-                        <a href="{% url 'show' order.id %}" class="btn mb-1 btn-rounded btn-success"><i class="md md-print"></i> </a>
+                        <a href="{% url 'show' order.id %}" class="btn mb-1 btn-rounded btn-info"><i class="md md-print"></i> </a>
                     </td>
                 </tr>
                 {% endfor %}
