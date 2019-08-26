@@ -1,6 +1,12 @@
 # Laundry-App
 Order management system built for laundry city.
 
+## Setup
+- Activate Virtual Environment
+```
+foo@bar:~$ source ./venv/bin/activate
+```
+
 ## Install
 
 - Install requirements by typing this:
