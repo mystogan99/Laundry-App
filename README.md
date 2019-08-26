@@ -19,7 +19,7 @@ foo@bar:~$ python manage.py createsuperuser
 ```
 foo@bar:~$ python manage.py runserver
 ```
-- Reset port by typing:
+- Reset port by typing (If required):
 ```
 foo@bar:~$ sudo fuser -k 8000/tcp
 ```
