@@ -1,6 +1,14 @@
 # Laundry-App
 Order management system built for laundry city.
 
+## Setup
+- Activate Virtual Environment
+```
+foo@bar:~$ source ./venv/bin/activate
+```
+- Add credentials for Google SMTP in settings.py
+- Add your 160by2 API keys in sms.py 
+
 ## Install
 
 - Install requirements by typing this:
@@ -19,7 +27,7 @@ foo@bar:~$ python manage.py createsuperuser
 ```
 foo@bar:~$ python manage.py runserver
 ```
-- Reset port by typing:
+- Reset port by typing (If required):
 ```
 foo@bar:~$ sudo fuser -k 8000/tcp
 ```
