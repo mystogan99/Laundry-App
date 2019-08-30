@@ -9,8 +9,6 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from .sms import sendPostRequest
 
-URL = 'https://www.160by2.com/api/v1/sendCampaign'
-
 def succesfull(request):
      return render(request, 'succesfull.html')
 
@@ -21,17 +19,6 @@ def client(request):
     if request.POST:
         form = userform(request.POST)
         if form.is_valid():
-            subject = "Order from laundry city"
-            from_email = settings.EMAIL_HOST_USER
-            to_email = form.cleaned_data['email']
-            message = "Hey, Your order has been placed succesfully. Your valet will reach you soon."
-            phone = form.cleaned_data['phone']
-            response = sendPostRequest(URL, 'RJGUGSAI8ER4DL8SMWICU2TJ4RNGT1Y2', 'PAFW2F2SHJSX811P', 'stage', phone, '7014831301', 'Hey, Your order has been placed succesfully. Your valet will reach you soon.' )
-            print(response.text)
-            try:
-                send_mail(subject, message, from_email, [to_email], fail_silently = False)
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
             if form.save():
                 return redirect('/succesfull', messages.success(request, 'Order was successfully created.', 'alert-success'))
                 
