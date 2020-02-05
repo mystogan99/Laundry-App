@@ -14,10 +14,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'b)4ewy!zdn6_vb0_qq7iqxv#ul87lm7#j&&cd7tbr2ib6!!6$1'
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'b)4ewy!zdn6_vb0_qq7iqxv#ul87lm7#j&&cd7tbr2ib6!!6$1'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE')=='True')
+DEBUG = 'True'
 
 ALLOWED_HOSTS = ['laundrycity.herokuapp.com', 'localhost', 'http://192.168.43.114']
 
